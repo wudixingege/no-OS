@@ -209,6 +209,7 @@ int main(void)
 		.ddr_base_addr = OUTPUT_BASE_ADDRESS,
 	};
 
+	iio_demo_out_init_par.iio_desc = iio_desc;
 	status = iio_demo_init(&iio_demo_out_desc, &iio_demo_out_init_par);
 	if (status < 0)
 		return status;
@@ -219,6 +220,7 @@ int main(void)
 		.ddr_base_addr = INPUT_BASE_ADDRESS,
 	};
 
+	iio_demo_in_init_par.iio_desc = iio_desc;
 	status = iio_demo_init(&iio_demo_in_desc, &iio_demo_in_init_par);
 	if (status < 0)
 		return status;
